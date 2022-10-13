@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #E5E5E5;
+}
+
+.cabecalho{
+    position: fixed;
+    top: 0;
+    width: 414px;
+    height: 92px;
+    background-color: #CF2B2B;
+    padding-left: 20px;
+    padding-top: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cabecalho h1{
+    font-family: "Righteous", sans-serif;
+    font-size: 44px;
+    color: #FFFFFF;
+}
+
+.cabecalho p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.container{
+    width: 414px;
+    margin-top: 123px;
+    margin-bottom: 108px;
+    padding-left: 20px;
+}
+
+.primeiro{
+    margin-top: 27px;
+}
+
+.primeiro h1{
+    font-family: "Righteous", sans-serif;
+    font-size: 26px;
+    color: #333333;
+}
+
+.container-pratos{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.caixas{
+    min-width: 172px;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+    margin-top: 17px;
+    margin-right: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 18px;
+    padding-bottom: 5px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.3);
+}
+
+.caixas h1{
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.caixas p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #A6A6A6;
+}
+
+.caixas h2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #000000;
+}
+
+.menu-inferior{
+    position: fixed;
+    bottom: 0;
+    width: 414px;
+    height: 92px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fechamento{
+    width: 364px;
+    height: 61px;
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fechamento p{
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+}
