@@ -1,103 +1,98 @@
+let prato;
+let valor1;
+let bebida;
+let valor2;
+let sobremesa;
+let valor3;
+let valorTotal;
 
-function selecionar1(){
-    const prato1 = document.querySelector(".caixa1");
-    prato1.classList.toggle("selecionada");
-    const checking1 = document.querySelector(".check1");
-    checking1.classList.toggle("esconde");
+function selecionarPrato(select){
+
+    const botaoAnterior = document.querySelector(".pratos .selecionada");
+
+    if (botaoAnterior !== null){
+        botaoAnterior.classList.remove("selecionada");
+        botaoAnterior.classList.add("esconde");
+    }
+
+    select.classList.toggle("selecionada");
+    select.classList.toggle("esconde");
+
+    const pratoSel = document.querySelector(".pratos .selecionada .qualPrato");
+    prato = pratoSel.innerHTML;
+    const valorPrato = document.querySelector(".pratos .selecionada .cadaValor");
+    valor1 = parseFloat(valorPrato.innerHTML.replace(',','.'));
+
+    finalizarPedido();
 }
 
-function selecionar2(){
-    const selecao = document.querySelector(".caixa2");
-    selecao.classList.toggle("selecionada");
-    const checking = document.querySelector(".check2");
-    checking.classList.toggle("esconde");
+function selecionarBebida(select){
+
+    const botaoAnterior = document.querySelector(".bebidas .selecionada");
+
+    if (botaoAnterior !== null){
+        botaoAnterior.classList.remove("selecionada");
+        botaoAnterior.classList.add("esconde");
+    }
+
+    select.classList.toggle("selecionada");
+    select.classList.toggle("esconde");
+
+    const bebidaSel = document.querySelector(".bebidas .selecionada .qualBebida");
+    bebida = bebidaSel.innerHTML;
+    const valorPrato = document.querySelector(".bebidas .selecionada .cadaValor");
+    valor2 = parseFloat(valorPrato.innerHTML.replace(',','.'));
+
+    finalizarPedido();
 }
 
-function selecionar3(){
-    const selecao = document.querySelector(".caixa3");
-    selecao.classList.toggle("selecionada");
-    const checking = document.querySelector(".check3");
-    checking.classList.toggle("esconde");
+function selecionarSobremesa(select){
+
+    const botaoAnterior = document.querySelector(".sobremesas .selecionada");
+
+    if (botaoAnterior !== null){
+        botaoAnterior.classList.remove("selecionada");
+        botaoAnterior.classList.add("esconde");
+    }
+
+    select.classList.toggle("selecionada");
+    select.classList.toggle("esconde");
+
+    const sobremesaSel = document.querySelector(".sobremesas .selecionada .qualSobremesa");
+    sobremesa = sobremesaSel.innerHTML;
+    const valorPrato = document.querySelector(".sobremesas .selecionada .cadaValor");
+    valor3 = parseFloat(valorPrato.innerHTML.replace(',','.'));
+
+    finalizarPedido();
 }
 
-function selecionar4(){
-    const selecao = document.querySelector(".caixa4");
-    selecao.classList.toggle("selecionada");
-    const checking = document.querySelector(".check4");
-    checking.classList.toggle("esconde");
-}
-
-function selecionar5(){
-    const selecao = document.querySelector(".caixa5");
-    selecao.classList.toggle("selecionada");
-    const checking = document.querySelector(".check5");
-    checking.classList.toggle("esconde");
-}
-
-function selecionar6(){
-    const selecao = document.querySelector(".caixa6");
-    selecao.classList.toggle("selecionada");
-    const checking = document.querySelector(".check6");
-    checking.classList.toggle("esconde");
-}
-
-function selecionar7(){
-    const selecao = document.querySelector(".caixa7");
-    selecao.classList.toggle("selecionada");
-    const checking = document.querySelector(".check7");
-    checking.classList.toggle("esconde");
-}
-
-function selecionar8(){
-    const selecao = document.querySelector(".caixa8");
-    selecao.classList.toggle("selecionada");
-    const checking = document.querySelector(".check8");
-    checking.classList.toggle("esconde");
-}
-
-function selecionar9(){
-    const selecao = document.querySelector(".caixa9");
-    selecao.classList.toggle("selecionada");
-    const checking = document.querySelector(".check9");
-    checking.classList.toggle("esconde");
-}
-
-function testeJS(){
-    const elemento = document.querySelector(".fechamento");
-    elemento.innerHTML = "<p>lala</p>";
-        
-}
-
-function checagem() {
-    const prato1 = document.querySelector(".caixa1");
-    const prato2 = document.querySelector(".caixa2");
-    const prato3 = document.querySelector(".caixa3");
-    const bebida1 = document.querySelector(".caixa4");
-    const bebida2 = document.querySelector(".caixa5");
-    const bebida3 = document.querySelector(".caixa6");
-    const sobremesa1 = document.querySelector(".caixa7");
-    const sobremesa2 = document.querySelector(".caixa8");
-    const sobremesa3 = document.querySelector(".caixa9");
-
-    if (prato1.classList.contains("selecionada") || prato2.classList.contains("selecionada") || prato3.classList.contains("selecionada")){
-        if(bebida1.classList.contains("selecionada") || bebida2.classList.contains("selecionada") || bebida3.classList.contains("selecionada")){
-            if(sobremesa1.classList.contains("selecionada") || sobremesa2.classList.contains("selecionada") || sobremesa3.classList.contains("selecionada")){
+function finalizarPedido(){
+    if (prato !== undefined){
+        if (bebida !== undefined){
+            if (sobremesa !== undefined){
                 const elemento = document.querySelector(".fechamento");
                 elemento.classList.add("verde");
                 elemento.innerHTML = "<p>Fechar pedido</p>";
-            } else{
-                const elemento = document.querySelector(".fechamento");
-                elemento.classList.remove("verde");
-                elemento.innerHTML = "<p>Selecione os 3 itens <br> para fechar o pedido</p>";
+                document.getElementById("botao").disabled = false;
             }
-        } else{
-            const elemento = document.querySelector(".fechamento");
-            elemento.classList.remove("verde");
-            elemento.innerHTML = "<p>Selecione os 3 itens <br> para fechar o pedido</p>";
-        }    
-    } else{
-        const elemento = document.querySelector(".fechamento");
-        elemento.classList.remove("verde");
-        elemento.innerHTML = "<p>Selecione os 3 itens <br> para fechar o pedido</p>";
+        }
     }
+}
+
+let uri;
+let encoded;
+let linkPronto;
+
+function mensagemFinal () {
+    valorTotal = valor1 + valor2 + valor3;
+
+    uri =   `Olá, gostaria de fazer o pedido:
+- Prato: ${prato}
+- Bebida: ${bebida}
+- Sobremesa: ${sobremesa}
+Total: R$ ${valorTotal.toFixed(2)}`;
+
+    encoded = encodeURIComponent(uri);
+    linkPronto = `https://wa.me/5534991984379?text=${encoded}`;
+    window.open(linkPronto);
 }

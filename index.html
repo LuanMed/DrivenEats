@@ -18,31 +18,31 @@
         <div class="primeiro">
             <h1>Primeiro, seu prato</h1>
         </div> 
-        <div class="container-pedidos">
-            <div class="caixas caixa1" onclick="selecionar1(); checagem()">
+        <div class="container-pedidos pratos">
+            <div class="caixas caixa1 esconde" onclick="selecionarPrato(this); checagem()">
                 <img src="./imagens/frango_yin_yang.png" alt="">
-                <h1>Frango Yin Yang</h1>
+                <h1 class="qualPrato">Frango Yin Yang</h1>
                 <p>Um pouco de batata, um pouco de salada</p>
-                <h2>R$ 14,90</h2>
-                <div class="check check1 esconde">
+                <h2>R$ <span class= cadaValor>14,90</span></h2>
+                <div class="check check1">
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="caixas caixa2" onclick="selecionar2(); checagem()">
+            <div class="caixas caixa2 esconde" onclick="selecionarPrato(this); checagem()">
                 <img src="./imagens/frango_yin_yang.png" alt="">
-                <h1>Chicken Fries</h1>
+                <h1 class="qualPrato">Chicken Fries</h1>
                 <p>Um pouco de batata, um pouco de salada</p>
-                <h2>R$ 19,90</h2>
-                <div class="check check2 esconde">
+                <h2>R$ <span class= cadaValor>19,90</span></h2>
+                <div class="check check2">
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="caixas caixa3" onclick="selecionar3(); checagem()">
+            <div class="caixas caixa3 esconde" onclick="selecionarPrato(this); checagem()">
                 <img src="./imagens/frango_yin_yang.png" alt="">
-                <h1>Coxa Empanada</h1>
+                <h1 class="qualPrato">Coxa Empanada</h1>
                 <p>Um pouco de batata, um pouco de salada</p>
-                <h2>R$ 24,90</h2>
-                <div class="check check3 esconde">
+                <h2>R$ <span class= cadaValor>24,90</span></h2>
+                <div class="check check3">
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
@@ -50,31 +50,31 @@
         <div class="primeiro">
             <h1>Agora, sua bebida</h1>
         </div> 
-        <div class="container-pedidos">
-            <div class="caixas caixa4" onclick="selecionar4(); checagem()">
+        <div class="container-pedidos bebidas">
+            <div class="caixas caixa4 esconde" onclick="selecionarBebida(this); checagem()">
                 <img src="./imagens/coquinha_gelada.png" alt="">
-                <h1>Coquinha Gelada</h1>
+                <h1 class="qualBebida">Coquinha Gelada</h1>
                 <p>Lata 350ml</p>
-                <h2>R$ 5,90</h2>
-                <div class="check check4 esconde">
+                <h2>R$ <span class= cadaValor>5,90</span></h2>
+                <div class="check check4">
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="caixas caixa5" onclick="selecionar5(); checagem()">
+            <div class="caixas caixa5 esconde" onclick="selecionarBebida(this); checagem()">
                 <img src="./imagens/coquinha_gelada.png" alt="">
-                <h1>Coquinha Natural</h1>
+                <h1 class="qualBebida">Coquinha Natural</h1>
                 <p>Lata 350ml</p>
-                <h2>R$ 4,90</h2>
-                <div class="check check5 esconde">
+                <h2>R$ <span class= cadaValor>4,90</span></h2>
+                <div class="check check5">
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="caixas caixa6" onclick="selecionar6(); checagem()">
+            <div class="caixas caixa6 esconde" onclick="selecionarBebida(this); checagem()">
                 <img src="./imagens/coquinha_gelada.png" alt="">
-                <h1>Coquinha Quente</h1>
+                <h1 class="qualBebida">Coquinha Quente</h1>
                 <p>Lata 350ml</p>
-                <h2>R$ 3,90</h2>
-                <div class="check check6 esconde">
+                <h2>R$ <span class= cadaValor>3,90</span></h2>
+                <div class="check check6">
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
@@ -82,38 +82,38 @@
         <div class="primeiro">
             <h1>Por fim, sua sobremesa</h1>
         </div> 
-        <div class="container-pedidos">
-            <div class="caixas caixa7" onclick="selecionar7(); checagem()">
+        <div class="container-pedidos sobremesas">
+            <div class="caixas caixa7 esconde" onclick="selecionarSobremesa(this); checagem()">
                 <img src="./imagens/pudim.png" alt="">
-                <h1>Pudim</h1>
+                <h1 class="qualSobremesa">Pudim</h1>
                 <p>Pudim de leite</p>
-                <h2>R$ 7,90</h2>
-                <div class="check check7 esconde">
+                <h2>R$ <span class= cadaValor>7,90</span></h2>
+                <div class="check check7">
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="caixas caixa8" onclick="selecionar8(); checagem()">
+            <div class="caixas caixa8 esconde" onclick="selecionarSobremesa(this); checagem()">
                 <img src="./imagens/pudim.png" alt="">
-                <h1>Pudim Gourmet</h1>
+                <h1 class="qualSobremesa">Pudim Gourmet</h1>
                 <p>O mesmo pudim, só que mais caro</p>
-                <h2>R$ 17,90</h2>
-                <div class="check check8 esconde">
+                <h2>R$ <span class= cadaValor>17,90</span></h2>
+                <div class="check check8">
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="caixas caixa9" onclick="selecionar9(); checagem()">
+            <div class="caixas caixa9 esconde" onclick="selecionarSobremesa(this); checagem()">
                 <img src="./imagens/pudim.png" alt="">
-                <h1>Pudim Vencido</h1>
+                <h1 class="qualSobremesa">Pudim Vencido</h1>
                 <p>Tenta a sorte</p>
-                <h2>R$ 2,90</h2>
-                <div class="check check9 esconde">
+                <h2>R$ <span class= cadaValor>2,90</span></h2>
+                <div class="check check9">
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
         </div>
     </div>
     <div class="menu-inferior">
-        <button class="fechamento">
+        <button id="botao" disabled onclick="mensagemFinal()" class="fechamento">
             <p>Selecione os 3 itens <br> para fechar o pedido</p>
         </button>
     </div>
